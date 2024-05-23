@@ -84,6 +84,7 @@ declare -a nix_copy_options
 declare -a ssh_copy_id_args
 declare -a ssh_args
 
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
   -f | --flake)
