@@ -210,6 +210,8 @@ nix_build() {
   NIX_SSHOPTS="-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i $ssh_key_dir/nixos-anywhere ${ssh_args[*]}" nix build \
     --print-out-paths \
     --no-link \
+    --trusted-substituters 'https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store' \
+    --extra-trusted-substituters 'https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store' \
     "${nix_options[@]}" \
     "$@"
 }
