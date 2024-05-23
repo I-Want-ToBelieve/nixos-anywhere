@@ -203,6 +203,8 @@ ssh_() {
 
 nix_copy() {
   NIX_SSHOPTS="-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i $ssh_key_dir/nixos-anywhere ${ssh_args[*]}" nix copy \
+    --trusted-substituters 'https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store' \
+    --extra-trusted-substituters 'https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store' \
     "${nix_options[@]}" \
     "${nix_copy_options[@]}" \
     "$@"
