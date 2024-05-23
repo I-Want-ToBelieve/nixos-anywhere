@@ -1,5 +1,8 @@
 # nixos-anywhere
 
+Diff: add   "--trusted-substituters 'https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store'"
+  "--extra-trusted-substituters 'https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store'"
+
 **_Install NixOS everywhere via ssh_**
 
 <img src="https://raw.githubusercontent.com/nix-community/nixos-anywhere/main/docs/logo.png" width="150" height="150">
